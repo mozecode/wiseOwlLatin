@@ -1,0 +1,56 @@
+{
+    "topics":[
+        { "topic_id": "01Decl",
+            "videos":["https://www.youtube.com/embed/UJCdpT_NZ6s", "https://www.youtube.com/embed/2fhP_fk2wNQ", "https://www.youtube.com/embed/9kUxUV7R3vc"],
+            "exercise_url":" http://www.quia.com/jg/514459.html" ,
+            "title":"First Declension Nouns",
+            "jumbo_img":"/images/ForumBanner.jpg"
+
+        },
+        {"topic_id": "02Decl",
+            "videos":["https://www.youtube.com/embed/wj7PEChmHwI", "https://www.youtube.com/embed/X41UMTwE3fY", "https://www.youtube.com/embed/T4Gfs2K9h0w"],
+            "exercise_url":"http://www.quia.com/ba/439199.html" ,
+            "title":"Second Declension Nouns",
+            "jumbo_img":"/images/oculus1600x800.jpg"
+
+        },
+        {"topic_id": "03Decl",
+            "videos":["https://www.youtube.com/embed/Wq3z7ZNNhuo", "https://www.youtube.com/embed/x20lC0pmSH8", "https://www.youtube.com/embed/Srf2_4wzlQo" ],
+            "exercise_url":"http://www.quia.com/cb/58204.html" ,
+            "title":"Third Declension Nouns",
+            "jumbo_img":"/images/dramamasks1600x800.jpg"
+
+        },
+        {"topic_id": "01Present",
+            "videos":["https://www.youtube.com/embed/pZ-O2A8csCo", "https://www.youtube.com/embed/Mdm38ampiEw", "https://www.youtube.com/embed/VTl7H0WFwbE"],
+            "exercise_url": "https://www.quia.com/cb/773479.html",
+            "title":"First Conjugation Present Tense",
+            "jumbo_img":"/images/AqueductField.jpg"
+
+        },
+        {"topic_id": "01ImpFut",
+            "videos":["https://www.youtube.com/embed/4U5OQHx9fCg", "https://www.youtube.com/embed/CR5QfjsamYY", "https://www.youtube.com/embed/z-2gXOb9Y5Y?list=PLEFD8277933E40C67" ],
+            "exercise_url": "http://www.quia.com/ba/145362.html",
+            "title":"First Conjugation Imperfect and Future Tenses",
+            "jumbo_img":"/images/ColosseumModel1.jpg"
+
+        },
+        {"topic_id": "01Life",
+            "videos":["https://www.youtube.com/embed/BLU2sAlJ_dI", "https://www.youtube.com/embed/juWYhMoDTN0", "https://www.youtube.com/embed/ER0Cu0KQFqM"  ],
+            "exercise_url": "http://www.quia.com/jq/91064.html",
+            "title":"Roman Life",
+            "jumbo_img":"/images/Panto1600x800.jpg"
+
+        },
+        {"topic_id": "01Kings",
+            "videos":["https://www.youtube.com/embed/RHyKq0Wcq0Q", "https://www.youtube.com/embed/ItwGz43a_ak", "https://www.youtube.com/embed/9x0V2DyF9uE"],
+            "exercise_url": " http://www.quia.com/pop/49295.html",
+            "title":"7 Kings of Rome",
+            "jumbo_img":"/images/PantheonExt1600x800.jpg"
+
+        }
+
+
+
+    ]
+}

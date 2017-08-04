@@ -40,7 +40,7 @@ Open a second terminal window, cd into the project file, and run your server to 
 ```http-server```
 
 
-README.md should have notice informing the user of the hidden API key and how to recreate the file.
+README.md should have notice informing the user of the hidden API key and how to recreate the file.  Contact me for how to...
 
 ### Author
 
