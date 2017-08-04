@@ -1,23 +1,23 @@
 # WiseOwlLatin
 
-##Project Description
+## Project Description
 
 Wise Owl Latin is a one-stop shop for learning the basics of the Latin language.  Designed for the new language learner, this website caters to diverse learners through a curated video collection and associated exercises that help make the language and culture accessible and fun.
 
-##Getting Started
+## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine.
 
-###Dependencies
+### Dependencies
 
 - [AngularJS](https://angularjs.org/)
 - [Grunt](https://gruntjs.com/)
 - [Firebase](https://firebase.google.com/)
 - [Bootstrap 3](http://getbootstrap.com/getting-started/)
 - [Sass](http://sass-lang.com/)
--[NPM](https://www.npmjs.com/)
+- [NPM](https://www.npmjs.com/)
 
-###Prerequisites
+### Prerequisites
 
 To install the necessary dependencies, clone down this project using the following:
 
@@ -42,10 +42,10 @@ Open a second terminal window, cd into the project file, and run your server to 
 
 README.md should have notice informing the user of the hidden API key and how to recreate the file.
 
-###Author
+### Author
 
 Greta Moseley
 
-###Acknowledgments
+### Acknowledgments
 
 **Maximas ago gratias** to Joe Shepherd, Steven Holmes, and Greg Korte for their incredible help and support.
