@@ -17,12 +17,14 @@ let isAuth = (UserFactory)=>{
     });
 };//if there's a logged in user, resolve, otherwise reject
 
-//route configuration
-// latinApp.config(($routeProvider)=>{
-//     $routeProvider
-//     .when('/', {
-//         templateUrl: 'partials/login.html',
-//         controller:'UserController'
-//     })
+// route configuration
+latinApp.config(($routeProvider)=>{
+    $routeProvider
+    .when('/', {
+        templateUrl: 'partials/login.html',
+        controller:'UserController'
+    })
+    .otherwise('/');
 
-// });
+
+});

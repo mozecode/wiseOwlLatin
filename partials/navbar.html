@@ -1,0 +1,30 @@
+<nav ng-controller="NavController">
+<header>
+    <h1>Wise Owl Latin</h1>
+    <a href="#/"><img src="images/logo.jpg"></a>
+    <!--check this path-->
+</header>
+
+<button class="btn btn-lg btn-info" ng-show="isLoggedIn" ng-click="openNav()">Open Navigation</button>
+<!--used w3schools example modified to play nice with AngularJS-->
+    <div class="sidenav" id="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
+         <!--use javascript:void(0) to ignore the link click-->
+         <a href="#!/logout" ng-show="isLoggedIn" ng-click="logout()">Logout</a>
+         <a href="#!/favorites">Favorites</a>
+
+         <h2>Grammar</h2>
+         <a href="#!/01Decl">First Declension Nouns</a>
+         <a href ="#!/02Decl">SecondDeclension Nouns</a>
+         <a href ="#!/03Decl">Third Declension Nouns</a>
+         <a href ="#!/01Present">First Conjugation Present Tense</a>
+         <a href ="#!/01ImpFut">First Conjugation Imperfect and Future Tenses</a>
+         <h2>Roman Culture and History</h2>
+         <a href ="#!/01Life">Roman Life</a>
+         <a href ="#!/01Kings">7 Kings of Rome</a>
+    </div>
+
+</nav>
+
+
+<!--button to open navigation bar only shows if user is logged in.-->

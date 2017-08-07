@@ -1,10 +1,111 @@
+//universal styles
 body {
     font-family: 'Poiret One'
 
 }
 
+//landing page styles
+.background{
+    height:100vh;
+    width:auto;
+    background-image: url('../images/LandingPgTemple.JPG');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+}
+
+/*logo styles*/
+
+.logoContainer{
+    padding-top: 20px;
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.logoContainer h1{
+    color:cadetblue;
+     text-shadow: 3px 1px 2px black;
+    margin-bottom: 20px;
+
+}
+
+.logoContainer img{
+
+    width:70%;
+    height:30%;
+    margin: 0 auto;
+    border-radius: 100%;
+    margin-bottom: 20px;
+
+}
+
+.signInBtn, .signUpBtn{
+    display:block;
+    clear:both;
+    margin: 0 auto;
+    border-radius: 30px;
+    height:40px;
+    font-size: 1.2em;
+    background-color: cadetblue;
+    color:goldenrod;
+   text-shadow: 3px 1px 2px black;
+
+}
+
+//jumbotron styles for
 .jumbo{
     color:goldenrod;
     font-weight: bold;
 
+}
+
+//navigation styles
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1; // make content stay on top
+    top: 0;
+    left: 0;
+    background-color: cadetblue;
+    overflow-x: hidden; // don't want horizontal scroll
+    padding-top: 60px;
+    transition: 0.5s; //slide in the sidenav
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: goldenrod; //change link color on mouseover
+}
+
+.sidenav .closebtn {
+    //put close button in the right spot, position nav
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+//push page to the right when nav opens
+#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}
+
+//media queries
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
 }
