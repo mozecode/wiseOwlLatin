@@ -3,7 +3,7 @@
 latinApp.factory("VideoFactory", function($q, $http, FirebaseUrl){
 
 //actions needed
-    let getOneTopic =(topicId) =>{
+    let getOneTopic = (topicId) =>{
         return $q((resolve, reject)=>{
             $http.get(`${FirebaseUrl}topics/${topicId}.json`)
             .then((topicData)=>{

@@ -24,6 +24,11 @@ latinApp.config(($routeProvider)=>{
         templateUrl: 'partials/login.html',
         controller:'UserController'
     })
+    // .when('/#!/faves', {
+    //     templateUrl: 'partials/faves.html',
+    //     controller:'',
+    //     resolve:{isAuth}
+    // })
     .otherwise('/');
 
 

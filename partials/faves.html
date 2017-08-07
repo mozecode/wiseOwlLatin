@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <section class="row">
+        <div class="col-md-8">
+            <h2>My Favorite Videos</h2>
+        </div>
+    </section>
+    <section class="row">
+        <div ng-repeat="" class="col-md-4">
+            <div class="card" id="{{topic_id}}">
+                <div class="card-image">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe width="560" height="315" ng-src={{videos}} frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <span class="card-title">{{title}}</span>
+                    <button ng-click ="" class="deleteBtn">Delete</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
