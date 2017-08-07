@@ -31,7 +31,7 @@ latinApp.factory("UserFactory", function($q, $http, FirebaseUrl, FBCreds){
         return currentUser;
     };//returns logged in user's uid
 
-//need a check to see if user exists already in FB
+    //need a check to see if user exists already in FB
     let userCheck = (userId)=>{
     //use uid to check firebase for a user object with that uid, so we don't duplicate objects by posting someone twice.
     console.log ("userId",userId);
