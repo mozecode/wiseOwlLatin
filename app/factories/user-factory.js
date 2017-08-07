@@ -38,8 +38,8 @@ latinApp.factory("UserFactory", function($q, $http, FirebaseUrl, FBCreds){
     return $q((resolve, reject)=>{
             $http.get(`${FirebaseUrl}users.json?orderBy="uid"&equalTo="${userId}"`)
             .then((existingUserData)=>{
-                console.log ("user already exists in FB");
-                resolve (existingUserData);
+                resolve (existingUserData.data);
+                console.log ("existingUserData",existingUserData.data);
             })
             .catch((err)=>{
                 console.log ("nope", err);
