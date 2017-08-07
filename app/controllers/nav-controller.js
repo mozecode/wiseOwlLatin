@@ -37,5 +37,8 @@ latinApp.controller("NavController", function($scope, $window, FilterFactory, Us
     $scope.logout =()=>{
         console.log ("logout initiated");
         UserFactory.logoutUser();
+        $scope.closeNav();
+        $window.location.href ='#!/login';
+
     };
 });
