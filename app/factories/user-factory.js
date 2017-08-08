@@ -48,7 +48,7 @@ latinApp.factory("UserFactory", function($q, $http, FirebaseUrl, FBCreds){
         });
     };
 
-    let postNewUserToFB = (userObj)=>{
+    let postUserToFB = (userObj)=>{
         //post new user object to firebase
         return $q( (resolve, reject) => {
             $http.post(`${FirebaseUrl}users.json`,
@@ -63,15 +63,6 @@ latinApp.factory("UserFactory", function($q, $http, FirebaseUrl, FBCreds){
         });
 
     };
-
-//need to add user favorites to the user object like we updated todos, just using the url/id from the topics in the partial to add that id to the user object?
-    //let addUserFaves=()=>{}
-
-
-//need to delete user faves from user object
-    //let deleteUserFaves =()=>{}
-
-//removing from array that's the value of the faves property on the user object
 
     let loginUser =()=>{
         return $q((resolve, reject)=>{
@@ -94,5 +85,5 @@ latinApp.factory("UserFactory", function($q, $http, FirebaseUrl, FBCreds){
         });
     };
 
-    return {isAuthenticated, userCheck, postNewUserToFB, getUser, loginUser, logoutUser};
+    return {isAuthenticated, userCheck, postUserToFB, getUser, loginUser, logoutUser};
 });

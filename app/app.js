@@ -1,6 +1,6 @@
 'use strict';
 
-let latinApp = angular.module("LatinApp", ["ngRoute"])
+let latinApp = angular.module("LatinApp", ["ngRoute","anguvideo"])
 .constant("FirebaseUrl", "https://wiseowllatin.firebaseio.com/");
 //don't forget the slash at the end of the url
 
@@ -23,6 +23,11 @@ latinApp.config(($routeProvider)=>{
     .when('/', {
         templateUrl: 'partials/login.html',
         controller:'UserController'
+    })
+    .when('/view/:topic_id',{
+        templateUrl:'partials/topics.html',
+        controller:'VideoController'
+        // resolve:{isAuth}
     })
     // .when('/#!/faves', {
     //     templateUrl: 'partials/faves.html',

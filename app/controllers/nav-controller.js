@@ -20,6 +20,7 @@ latinApp.controller("NavController", function($scope, $window, FilterFactory, Us
 
     });
 
+
     $scope.openNav=()=> {
         console.log ("Open nav clicked");
         document.getElementById("mySidenav").style.width = "250px";
