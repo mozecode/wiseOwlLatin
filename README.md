@@ -11,6 +11,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Dependencies
 
 - [AngularJS](https://angularjs.org/)
+- [angular-video](https://www.npmjs.com/package/angular-video)
 - [Grunt](https://gruntjs.com/)
 - [Firebase](https://firebase.google.com/)
 - [Bootstrap 3](http://getbootstrap.com/getting-started/)
@@ -40,7 +41,7 @@ Open a second terminal window, cd into the project file, and run your server to 
 ```http-server```
 
 
-README.md should have notice informing the user of the hidden API key and how to recreate the file.
+README.md should have notice informing the user of the hidden API key and how to recreate the file.  Contact me for how to...
 
 ### Author
 

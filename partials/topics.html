@@ -1,0 +1,17 @@
+<div ng-repeat="item in topic" class="">
+    <h1>{{item.title}}</h1>
+    <p><a class="btn btn-primary btn-lg" ng-href={{item.exercise_url}}  target="_blank" role="button">Exercises</a></p>
+    <section class="row">
+        <div ng-repeat="video in item.videos" class="col-md-4">
+            <div class="card" id ="{{video.video_id}}">
+                <div class="card-image">
+                    <div anguvideo ng-model="video.video_url" width="250" height="250"></div>
+                </div>
+                <div class="card-content">
+                    <span class="card-title">{{item.title}}</span>
+                    <button ng-click ="" class="addBtn">Add to Favorites</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
