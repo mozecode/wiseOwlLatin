@@ -1,7 +1,12 @@
 //universal styles
 body {
-    font-family: 'Poiret One'
+    font-family: 'Poiret One';
+    font-weight: bold;
 
+}
+
+h1, h2{
+    font-weight:bold;
 }
 
 //landing page styles
@@ -79,13 +84,14 @@ body {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: darkblue;
     display: block;
     transition: 0.3s
 }
 
 .sidenav a:hover, .offcanvas a:focus{
     color: goldenrod; //change link color on mouseover
+    cursor: pointer;
 }
 
 .sidenav .closebtn {
