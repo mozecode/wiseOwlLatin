@@ -20,6 +20,8 @@ let topicData ={};
         });
     };
 
+
+
     let getTopicData =()=>{
         console.log ("topicData",topicData);
         return topicData;

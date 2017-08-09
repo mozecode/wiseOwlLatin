@@ -26,14 +26,14 @@ latinApp.config(($routeProvider)=>{
     })
     .when('/view/:topic_id',{
         templateUrl:'partials/topics.html',
-        controller:'VideoController'
-        // resolve:{isAuth}
+        controller:'VideoController',
+        resolve:{isAuth}
     })
-    // .when('/#!/faves', {
-    //     templateUrl: 'partials/faves.html',
-    //     controller:'',
-    //     resolve:{isAuth}
-    // })
+    .when('/faves', {
+        templateUrl: 'partials/faves.html',
+        controller:'FavesController',
+        resolve:{isAuth}
+    })
     .otherwise('/');
 
 

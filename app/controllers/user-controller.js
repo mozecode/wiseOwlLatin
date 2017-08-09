@@ -33,17 +33,17 @@ latinApp.controller("UserController", function($scope, $window, UserFactory, Vid
                 if (uid){
                     console.log ("You have already registered. Salve! ");
                     $window.location.href = '#!/faves';
+                    //this isn't going to the faves page on login-- need to look at routing
 
                 }else{
                     //if the userCheck fails, post the new user's object to FB
                     UserFactory.postUserToFB($scope.acct)
                     .then((userData)=>{
                     console.log ("new user! YAY!", userData);
-                    $window.location.href ='#!/01Decl';
+                    $window.location.href ='/view/0'; //sends new user to first grammar topic
                     });
                 }
             });
-            //where to direct new users without faves? First Declension view
         });
     };
 
