@@ -6,21 +6,25 @@
     </header>
     <button class="btn btn-lg btn-info" ng-show="isLoggedIn" ng-click="openNav()">Open Navigation</button>
     <!--used w3schools example modified to play nice with AngularJS-->
-    <div ng-controller="TopicController" class="sidenav" id="mySidenav">
+    <div class="sidenav" id="mySidenav">
         <a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
         <!--use javascript:void(0) to ignore the link click-->
-        <a href="#!/logout" ng-show="isLoggedIn" ng-click="logout()">Logout</a>
-        <a href="#!/faves">Favorites</a>
-        <h2>Grammar</h2>
-        <!--grab id and use with get topic in video controller-->
-        <a id="01Decl" ng-click="getTopic($event)">First Declension Nouns</a>
-        <a id="02Decl" ng-click="getTopic($event)">SecondDeclension Nouns</a>
-        <a id ="03Decl" ng-click="getTopic($event)">Third Declension Nouns</a>
-        <a id= "01Present" ng-click="getTopic($event)">First Conjugation Present Tense</a>
-        <a id ="01ImpFut" ng-click="getTopic($event)">First Conjugation Imperfect and Future Tenses</a>
-        <h2>Roman Culture and History</h2>
-        <a id="01Life" ng-click="getTopic($event)">Roman Life</a>
-        <a id ="01Kings" ng-click="getTopic($event)">7 Kings of Rome</a>
+        <a href="#!/logout" ng-show="isLoggedIn" ng-click="logout();closeNav()">Logout</a>
+        <div ng-controller ="FavesController">
+            <a href="#!/faves">Favorites</a>
+        </div>
+        <div ng-controller ="TopicController">
+            <h2>Grammar</h2>
+            <!--grab id and use with get topic in video controller-->
+            <a id="01Decl" ng-click="getTopic($event)">First Declension Nouns</a>
+            <a id="02Decl" ng-click="getTopic($event)">SecondDeclension Nouns</a>
+            <a id ="03Decl" ng-click="getTopic($event)">Third Declension Nouns</a>
+            <a id= "01Present" ng-click="getTopic($event)">First Conjugation Present Tense</a>
+            <a id ="01ImpFut" ng-click="getTopic($event)">First Conjugation Imperfect and Future Tenses</a>
+            <h2>Roman Culture and History</h2>
+            <a id="01Life" ng-click="getTopic($event)">Roman Life</a>
+            <a id ="01Kings" ng-click="getTopic($event)">7 Kings of Rome</a>
+        </div>
     </div>
 </nav>
 <!--button to open navigation bar only shows if user is logged in.-->

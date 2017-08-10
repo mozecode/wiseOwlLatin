@@ -13,11 +13,8 @@ latinApp.factory("UserFactory", function($q, $http, FirebaseUrl, FBCreds){
 
     let isAuthenticated = function(){
         return new Promise ((resolve, reject)=>{
-            console.log ("onAuthStateChanged fired");
             firebase.auth().onAuthStateChanged(function(user){
-                console.log ("onAuthStateChanged done");
                 if (user){
-                    console.log ("user", user);
                     currentUser= user.uid;
                     resolve(true);
                 }else{
@@ -33,16 +30,12 @@ latinApp.factory("UserFactory", function($q, $http, FirebaseUrl, FBCreds){
 
     //need a check to see if user exists already in FB
     let userCheck = (userId)=>{
-    //use uid to check firebase for a user object with that uid, so we don't duplicate objects by posting someone twice.
-    console.log ("userId",userId);
-    return $q((resolve, reject)=>{
+        return $q((resolve, reject)=>{
             $http.get(`${FirebaseUrl}users.json?orderBy="uid"&equalTo="${userId}"`)
             .then((existingUserData)=>{
                 resolve (existingUserData.data);
-                console.log ("existingUserData",existingUserData.data);
             })
             .catch((err)=>{
-                console.log ("nope", err);
                 reject(err);
             });
         });
@@ -54,14 +47,30 @@ latinApp.factory("UserFactory", function($q, $http, FirebaseUrl, FBCreds){
             $http.post(`${FirebaseUrl}users.json`,
             angular.toJson(userObj))
             .then( (newUserData) => {
-                console.log ("new user", newUserData);
-                 resolve(newUserData);
+                resolve(newUserData);
             })
             .catch( (err) => {
                 reject(err);
             });
         });
 
+    };
+
+    let patchUpdatedUserOnFB =(vidObj, fbkey)=>{
+        return $q((resolve, reject)=>{
+            if (fbkey){
+                $http.patch(`${FirebaseUrl}users/${fbkey}.json`,
+                    angular.toJson(vidObj))
+                .then((data)=>{
+                    resolve(data);
+                })
+                .catch((err)=>{
+                    reject(err);
+                });
+            } else{
+                console.log ("no dice");
+            }
+        });
     };
 
     let loginUser =()=>{
@@ -85,5 +94,5 @@ latinApp.factory("UserFactory", function($q, $http, FirebaseUrl, FBCreds){
         });
     };
 
-    return {isAuthenticated, userCheck, postUserToFB, getUser, loginUser, logoutUser};
+    return {isAuthenticated, userCheck, postUserToFB, patchUpdatedUserOnFB,getUser, loginUser, logoutUser};
 });
