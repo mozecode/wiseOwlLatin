@@ -13,11 +13,8 @@ latinApp.factory("UserFactory", function($q, $http, FirebaseUrl, FBCreds){
 
     let isAuthenticated = function(){
         return new Promise ((resolve, reject)=>{
-            console.log ("onAuthStateChanged fired");
             firebase.auth().onAuthStateChanged(function(user){
-                console.log ("onAuthStateChanged done");
                 if (user){
-                    console.log ("user", user);
                     currentUser= user.uid;
                     resolve(true);
                 }else{
@@ -33,15 +30,12 @@ latinApp.factory("UserFactory", function($q, $http, FirebaseUrl, FBCreds){
 
     //need a check to see if user exists already in FB
     let userCheck = (userId)=>{
-    console.log ("userId",userId);
-    return $q((resolve, reject)=>{
+        return $q((resolve, reject)=>{
             $http.get(`${FirebaseUrl}users.json?orderBy="uid"&equalTo="${userId}"`)
             .then((existingUserData)=>{
                 resolve (existingUserData.data);
-                console.log ("existingUserData",existingUserData.data);
             })
             .catch((err)=>{
-                console.log ("nope", err);
                 reject(err);
             });
         });
@@ -53,8 +47,7 @@ latinApp.factory("UserFactory", function($q, $http, FirebaseUrl, FBCreds){
             $http.post(`${FirebaseUrl}users.json`,
             angular.toJson(userObj))
             .then( (newUserData) => {
-                console.log ("new user", newUserData);
-                 resolve(newUserData);
+                resolve(newUserData);
             })
             .catch( (err) => {
                 reject(err);
@@ -79,22 +72,6 @@ latinApp.factory("UserFactory", function($q, $http, FirebaseUrl, FBCreds){
             }
         });
     };
-
-    // let deleteVideo = (vidId)=>{
-    //     return $q( (resolve, reject) => {
-    //   if (vidId) {
-    //     $http.delete(`${FirebaseUrl}users/${userKey}/faves/${vidId}.json`)
-    //     .then( (data) => {
-    //       resolve(data);
-    //     })
-    //     .catch( (err) => {
-    //       reject(err);
-    //     });
-    //   } else {
-    //     console.log("No id passed in");
-    //   }
-    // });
-    // };
 
     let loginUser =()=>{
         return $q((resolve, reject)=>{
