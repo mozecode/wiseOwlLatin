@@ -33,7 +33,6 @@ latinApp.factory("UserFactory", function($q, $http, FirebaseUrl, FBCreds){
 
     //need a check to see if user exists already in FB
     let userCheck = (userId)=>{
-    //use uid to check firebase for a user object with that uid, so we don't duplicate objects by posting someone twice.
     console.log ("userId",userId);
     return $q((resolve, reject)=>{
             $http.get(`${FirebaseUrl}users.json?orderBy="uid"&equalTo="${userId}"`)
@@ -64,6 +63,23 @@ latinApp.factory("UserFactory", function($q, $http, FirebaseUrl, FBCreds){
 
     };
 
+    let patchUpdatedUserOnFB =(vidObj, fbkey)=>{
+        return $q((resolve, reject)=>{
+            if (fbkey){
+                $http.patch(`${FirebaseUrl}users/${fbkey}.json`,
+                    angular.toJson(vidObj))
+                .then((data)=>{
+                    resolve(data);
+                })
+                .catch((err)=>{
+                    reject(err);
+                });
+            } else{
+                console.log ("no dice");
+            }
+        });
+    };
+
     let loginUser =()=>{
         return $q((resolve, reject)=>{
             let provider = new firebase.auth.GoogleAuthProvider();
@@ -85,5 +101,5 @@ latinApp.factory("UserFactory", function($q, $http, FirebaseUrl, FBCreds){
         });
     };
 
-    return {isAuthenticated, userCheck, postUserToFB, getUser, loginUser, logoutUser};
+    return {isAuthenticated, userCheck, postUserToFB, patchUpdatedUserOnFB,getUser, loginUser, logoutUser};
 });

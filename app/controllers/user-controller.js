@@ -8,7 +8,8 @@ latinApp.controller("UserController", function($scope, $window, UserFactory, Vid
             name:"",
             email:"",
             photoUrl:"",
-            uid:""
+            uid:"",
+            faves: 0//space needed here
     };
 
     $scope.register =()=>{
@@ -33,32 +34,15 @@ latinApp.controller("UserController", function($scope, $window, UserFactory, Vid
                 if (uid){
                     console.log ("You have already registered. Salve! ");
                     $window.location.href = '#!/faves';
-                    //this isn't going to the faves page on login-- need to look at routing
-
                 }else{
                     //if the userCheck fails, post the new user's object to FB
                     UserFactory.postUserToFB($scope.acct)
                     .then((userData)=>{
                     console.log ("new user! YAY!", userData);
-                    $window.location.href ='/view/0'; //sends new user to first grammar topic
+                    $window.location.href ='#!/view/0'; //sends new user to first grammar topic
                     });
                 }
             });
         });
     };
-
-//need to add user favorites to the user object like we updated todos, just using the url/id from the video in the partial to add that id to the user object?
- //let addToFaves=(faveId)=>{
-        //let userId = UserFactory.getUser();
-        //UserFactory.userCheck(userId)
-        //.then((userObj.data)=>{
-            //console.log(userObj.data);
-            //add new property of faves & give it a value of an array of ids
-            //postUserToFB(userObj with faves)
-        //})
-    //}
-
-//need to delete user faves from user object
-    //let deleteUserFaves =(userObj, faveId)=>{}
-    //removing from array that's the value of the faves property on the user object
 });
