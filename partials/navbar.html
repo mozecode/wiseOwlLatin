@@ -10,7 +10,9 @@
         <a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
         <!--use javascript:void(0) to ignore the link click-->
         <a href="#!/logout" ng-show="isLoggedIn" ng-click="logout();closeNav()">Logout</a>
-        <a href="#!/faves" ng-click="">Favorites</a>
+        <div ng-controller ="FavesController">
+            <a href="#!/faves">Favorites</a>
+        </div>
         <div ng-controller ="TopicController">
             <h2>Grammar</h2>
             <!--grab id and use with get topic in video controller-->
