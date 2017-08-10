@@ -80,6 +80,22 @@ latinApp.factory("UserFactory", function($q, $http, FirebaseUrl, FBCreds){
         });
     };
 
+    // let deleteVideo = (vidId)=>{
+    //     return $q( (resolve, reject) => {
+    //   if (vidId) {
+    //     $http.delete(`${FirebaseUrl}users/${userKey}/faves/${vidId}.json`)
+    //     .then( (data) => {
+    //       resolve(data);
+    //     })
+    //     .catch( (err) => {
+    //       reject(err);
+    //     });
+    //   } else {
+    //     console.log("No id passed in");
+    //   }
+    // });
+    // };
+
     let loginUser =()=>{
         return $q((resolve, reject)=>{
             let provider = new firebase.auth.GoogleAuthProvider();
