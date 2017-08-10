@@ -39,7 +39,6 @@ latinApp.controller("UserController", function($scope, $window, UserFactory, Vid
                     UserFactory.postUserToFB($scope.acct)
                     .then((userData)=>{
                     console.log ("new user! YAY!", userData);
-                    $window.location.href ='#!/view/5';
                     });
                 }
             });
