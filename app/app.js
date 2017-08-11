@@ -24,6 +24,11 @@ latinApp.config(($routeProvider)=>{
         templateUrl: 'partials/login.html',
         controller:'UserController'
     })
+    .when('/newUser',{
+        templateUrl:'partials/newUser.html',
+        controller:'NewUserController',
+        resolve:{isAuth}
+    })
     .when('/view/:topic_id',{
         templateUrl:'partials/topics.html',
         controller:'VideoController',
