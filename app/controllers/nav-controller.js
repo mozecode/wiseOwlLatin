@@ -17,7 +17,6 @@ latinApp.controller("NavController", function($scope, $window, FilterFactory, Us
 
     });
 
-
     $scope.openNav=()=> {
         document.getElementById("mySidenav").style.width = "250px";
         document.getElementById("main").style.marginLeft = "250px";
@@ -27,7 +26,7 @@ latinApp.controller("NavController", function($scope, $window, FilterFactory, Us
     $scope.closeNav=()=> {
         document.getElementById("mySidenav").style.width = "0";
         document.getElementById("main").style.marginLeft = "0";
-        document.body.style.backgroundColor = "white";
+        document.body.style.backgroundColor = "#56627A";
     };
 
     $scope.logout =()=>{
