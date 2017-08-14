@@ -10,8 +10,11 @@
     <body id="main" ng-app="LatinApp">
         <div ng-include="'partials/navbar.html'"></div>
         <!--include side navbar-->
+
         <div class="row">
             <div class="col-xs-10 col-xs-offset-1 main-container">
+
+                <!--views will appear here-->
                 <div ng-view></div>
             </div>
         </div>
@@ -32,6 +35,7 @@
         <script src="app/factories/filter-factory.js"></script>
         <!--controllers-->
         <script src="app/controllers/user-controller.js"></script>
+        <script src="app/controllers/user-avatar-controller.js"></script>
         <script src="app/controllers/new-user-controller.js"></script>
         <script src="app/controllers/video-controller.js"></script>
         <script src="app/controllers/topic-controller.js"></script>
