@@ -65,7 +65,7 @@ h1{
 
 }
 
-.addBtn, .deleteBtn, .exerciseBtn{
+.addBtn, .deleteBtn, .exerciseBtn, .avatarBtn{
     display:block;
     clear:both;
     border-radius: 30px;
@@ -169,6 +169,13 @@ header{
 .floatR{
     float: right;
 }
+//choose avatar view
+
+.lgAvatar{
+    width:120px;
+    height:120px;
+}
+
 //new user welcome view
 .welcomeImg{
     width:20%;

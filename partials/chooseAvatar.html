@@ -1,0 +1,25 @@
+<!--9 hard-coded pictures with values of url?-->
+<!--ng model or ng click?-->
+<div>
+    <h2>Please choose a new avatar:</h2>
+    <div>
+        <button class="avatarBtn" ng-click="saveNewAvatar()">Save</button>
+    </div>
+    <br>
+    <div class="row">
+    <!--display in columns-->
+        <div class="col-md-4">
+            <label class="radio-inline"><input type="radio" name="avatar" value="images/Poetess.jpg" ng-model="newAv.photo"><img class="lgAvatar" src="images/Poetess.jpg"></label>
+            <br>
+            <label class="radio-inline"><input type="radio" name="avatar" value="images/TrojanHorse.jpg" ng-model="newAv.photo"><img class="lgAvatar" src="images/TrojanHorse.jpg"></label>
+            <br>
+            <label class="radio-inline"><input type="radio" name="avatar" value="images/thinking.jpg" ng-model="newAv.photo"><img class="lgAvatar" src="images/thinking.jpg"></label>
+    <!-- <label class="radio-inline"><input type="radio" name="avatar" value="">Option 1</label>
+    <label class="radio-inline"><input type="radio" name="avatar" value="">Option 2</label>
+    <label class="radio-inline"><input type="radio" name="avatar" value="">Option 3</label>
+    <label class="radio-inline"><input type="radio" name="avatar" value="">Option 1</label>
+    <label class="radio-inline"><input type="radio" name="avatar" value="">Option 2</label>
+    <label class="radio-inline"><input type="radio" name="avatar" value="">Option 3</label> -->
+        </div>
+    </div>
+</div>
