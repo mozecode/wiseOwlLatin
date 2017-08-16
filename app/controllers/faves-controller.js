@@ -20,7 +20,7 @@ latinApp.controller("FavesController", function($scope, $window, UserFactory, Vi
                     userObj[userKey].faves.push(vidObj);
                 UserFactory.patchUpdatedUserOnFB(userObj[userKey], userKey)
                 .then((newUserData)=>{
-                    // alert('Successfully added to favorites.');
+                    $window.location.href="#!/faves";
                 });
             });
         });
