@@ -2,11 +2,9 @@
 
 latinApp.controller("AvatarChoiceController", function($scope, $window, UserFactory){
 
-//do I have to declare the obj on scope here as a stand-alone? to catch the ng model value?
     $scope.newAv={
         photo:""
     };
-
 
     $scope.saveNewAvatar=()=>{
         //get user id
