@@ -1,5 +1,15 @@
 <section class="welcome">
     <h2>Salve, {{userObject.name}}!</h2>
     <img class="welcomeImg"ng-src="{{userObject.photoUrl}}">
-    <h2>Welcome to Wise Owl Latin!</h3>
+    <h2>Welcome to Wise Owl Latin!</h2>
+    <div class="">
+        <!--if change, direct user to new view-->
+        <a href="#!/chooseAvatar"><button class="avatarBtn">Change my Avatar</button></a>
+        <!--if keeping, give message about exploring site using a collapse-->
+        <button class="avatarBtn" data-toggle="collapse" data-target="#greeting">Keep my Avatar</button>
+
+        <div id="greeting" class="collapse">
+            <h3>Gratias!  Please explore the site by clicking "open" above.</h3>
+        </div>
+    </div>
 </section>
