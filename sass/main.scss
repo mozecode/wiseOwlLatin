@@ -197,13 +197,24 @@ header{
     height:20%;
     margin: 0 auto;
     border-radius: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .welcome{
     text-align: center;
 
 }
+
+//choose Roman name view
+
+.nameInput {
+    width:75%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
 
 /* media queries*/
 

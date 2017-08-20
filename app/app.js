@@ -29,6 +29,11 @@ latinApp.config(($routeProvider)=>{
         controller:'NewUserController',
         resolve:{isAuth}
     })
+    .when('/chooseUsername',{
+        templateUrl:'partials/chooseUsername.html',
+        controller:'UsernameChoiceController',
+        resolve:{isAuth}
+    })
     .when('/chooseAvatar',{
         templateUrl:'partials/chooseAvatar.html',
         controller:'AvatarChoiceController',
