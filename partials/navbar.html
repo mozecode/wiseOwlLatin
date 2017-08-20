@@ -12,7 +12,10 @@
     <div class="sidenav" id="mySidenav">
         <a href="javascript:void(0)" class="closebtn" ng-click="closeNav()">&times;</a>
         <!--use javascript:void(0) to ignore the link click-->
-        <a href="#!/logout" ng-show="isLoggedIn" ng-click="logout();closeNav()">Logout</a>
+        <div class="">
+            <img class="sideNavLogo" src="images/logo.jpg">
+        </div>
+        <a href="#!/logout" ng-show="isLoggedIn" ng-click="logout();closeNav()">Log Out</a>
         <div ng-controller ="FavesController">
             <a href="#!/faves">Favorites</a>
         </div>
@@ -20,7 +23,7 @@
             <h2>Grammar</h2>
             <!--grab id and use with get topic in video controller-->
             <a id="01Decl" ng-click="getTopic($event)">First Declension Nouns</a>
-            <a id="02Decl" ng-click="getTopic($event)">SecondDeclension Nouns</a>
+            <a id="02Decl" ng-click="getTopic($event)">Second Declension Nouns</a>
             <a id ="03Decl" ng-click="getTopic($event)">Third Declension Nouns</a>
             <a id= "01Present" ng-click="getTopic($event)">First Conjugation Present Tense</a>
             <a id ="01ImpFut" ng-click="getTopic($event)">First Conjugation Imperfect and Future Tenses</a>
