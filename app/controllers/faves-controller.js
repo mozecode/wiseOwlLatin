@@ -17,11 +17,21 @@ latinApp.controller("FavesController", function($scope, $window, UserFactory, Vi
                 if (userObj[userKey].faves === 0 || !userObj[userKey].faves){
                     userObj[userKey].faves = [];
                 }
+
+                //ES6 findIndex used here to prevent duplicate favorites
+                let position = userObj[userKey].faves.findIndex(obj=>obj.video_id==vidObj.video_id);
+                console.log ("position", position);
+                if (position === -1){//if not already there, add it.
                     userObj[userKey].faves.push(vidObj);
-                UserFactory.patchUpdatedUserOnFB(userObj[userKey], userKey)
-                .then((newUserData)=>{
+                    UserFactory.patchUpdatedUserOnFB(userObj[userKey], userKey)
+                    .then((newUserData)=>{
+                        $window.location.href="#!/faves";
+                        //then direct user to faves page
+                    });
+                }else{
                     $window.location.href="#!/faves";
-                });
+                    //if already there, just go to faves page
+                }
             });
         });
     };
