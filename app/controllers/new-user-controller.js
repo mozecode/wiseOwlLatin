@@ -11,5 +11,4 @@ latinApp.controller("NewUserController", function($scope, $window, UserFactory, 
         $scope.userObject = userObj[userKey];
     });
     //use info from user object to populate the new user welcome partial by putting the user object on scope
-
 });

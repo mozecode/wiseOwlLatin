@@ -47,9 +47,9 @@ This project uses a hidden API key. Contact me for how to recreate the file at g
 
 Greta Moseley
 
-[https://github.com/mozecode]
+[https://github.com/mozecode](https://github.com/mozecode)
 
-###License
+### License
 
 [BY-NC-ND License](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
@@ -61,15 +61,7 @@ This project, its component videos, and any images contained therein may only be
 
 Thank you to my fellow Latin lovers on YouTube for sharing your creativity for the benefit of Latin students everywhere!  Special acknowledgements and gratitude to the following creators of some awesome Latin and Roman History videos:
 
-Latin Tutorial
-The Latin Language
-Eilersc
-Christina Hayward
-Preston Powers
-Margaux Pepper
-Ray Laurence
-Peta Greenfield
-Timaeus
+Latin Tutorial, The Latin Language, Eilersc, Christina Hayward, Preston Powers, Margaux Pepper, Ray Laurence, Peta Greenfield, Timaeus, and
 History Den
 
 

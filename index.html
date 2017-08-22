@@ -10,10 +10,8 @@
     <body id="main" ng-app="LatinApp">
         <div ng-include="'partials/navbar.html'"></div>
         <!--include side navbar-->
-
         <div class="row">
             <div class="col-xs-10 col-xs-offset-1 main-container">
-
                 <!--views will appear here-->
                 <div ng-view></div>
             </div>
@@ -27,7 +25,7 @@
         <script src="lib/node_modules/angular-video/js/anguvideo.js"></script>
         <script type="text/javascript" src="lib/node_modules/firebase/firebase.js"></script>
         <!--app files-->
-        <script type="text/javascript" src="app/app.js"></script>
+        <script src="app/app.js"></script>
         <!--providers/factories-->
         <script src="app/values/fb-creds.js"></script>
         <script src="app/factories/user-factory.js"></script>
@@ -36,8 +34,8 @@
         <!--controllers-->
         <script src="app/controllers/user-controller.js"></script>
         <script src="app/controllers/user-avatar-controller.js"></script>
-        <script type="text/javascript" src="app/controllers/avatar-choice-controller.js"></script>
-         <script type="text/javascript" src="app/controllers/username-choice-controller.js"></script>
+        <script src="app/controllers/avatar-choice-controller.js"></script>
+        <script src="app/controllers/username-choice-controller.js"></script>
         <script src="app/controllers/new-user-controller.js"></script>
         <script src="app/controllers/video-controller.js"></script>
         <script src="app/controllers/topic-controller.js"></script>

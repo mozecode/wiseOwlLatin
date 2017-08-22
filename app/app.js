@@ -50,6 +50,4 @@ latinApp.config(($routeProvider)=>{
         resolve:{isAuth}
     })
     .otherwise('/');
-
-
 });
