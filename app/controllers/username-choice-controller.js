@@ -23,8 +23,6 @@ latinApp.controller("UsernameChoiceController", function($scope, $window, UserFa
                 $window.location.href ='#!/newUser';
                 //direct user back to new user page
             });
-
         });
     };
-
 });

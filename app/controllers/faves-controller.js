@@ -20,7 +20,6 @@ latinApp.controller("FavesController", function($scope, $window, UserFactory, Vi
 
                 //ES6 findIndex used here to prevent duplicate favorites
                 let position = userObj[userKey].faves.findIndex(obj=>obj.video_id==vidObj.video_id);
-                console.log ("position", position);
                 if (position === -1){//if not already there, add it.
                     userObj[userKey].faves.push(vidObj);
                     UserFactory.patchUpdatedUserOnFB(userObj[userKey], userKey)
@@ -43,7 +42,6 @@ latinApp.controller("FavesController", function($scope, $window, UserFactory, Vi
             let userKey= Object.keys(userObj);
             $scope.faves = userObj[userKey].faves;
         });
-
     };
 
     getUserFaves(); //call immediately so app can track changes and respond if the view changes to faves on either click or login of existing user
@@ -67,6 +65,6 @@ latinApp.controller("FavesController", function($scope, $window, UserFactory, Vi
                 getUserFaves();
             });
             //patch that obj back onto FB
-         });
+        });
     };
 });

@@ -3,7 +3,6 @@ body {
     font-family: 'Poiret One';
     font-weight: bold;
     background-color:#56627A;
-
 }
 
 h1, h2{
@@ -18,13 +17,12 @@ h1{
     text-align: center;
 }
 
-
-
 .highlight{
     background-color: cadetblue;
     color:goldenrod;
     text-shadow:3px 1px 2px black;
 }
+
 //landing page styles
 .background{
     height:100vh;
@@ -33,7 +31,6 @@ h1{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
 }
 
 /*logo styles*/
@@ -42,24 +39,20 @@ h1{
     padding-top: 20px;
     margin: 0 auto;
     text-align: center;
-
 }
 
 .logoContainer h1{
     color:cadetblue;
      text-shadow: 3px 1px 2px black;
     margin-bottom: 20px;
-
 }
 
 .logoContainer img{
-
     width:70%;
     height:30%;
     margin: 0 auto;
     border-radius: 100%;
     margin-bottom: 20px;
-
 }
 
 //buttons
@@ -74,7 +67,6 @@ h1{
     color:goldenrod;
     text-shadow: 2px 1px 2px black;
     font-weight: bold;
-
 }
 
 .addBtn, .deleteBtn, .exerciseBtn{
@@ -214,7 +206,6 @@ header{
 
 .welcome{
     text-align: center;
-
 }
 
 //choose Roman name view
@@ -227,35 +218,27 @@ header{
     margin-bottom:10px;
 }
 
-
 /* media queries*/
 
 @media (min-width: 350px){
     .logoContainer{
         padding-top: 50px;
-
     }
 
     .logoContainer img{
-
         width:50%;
         height:40%;
         margin-bottom: 30px;
-
     }
-
-
 } /*end of 350px mq*/
 
 
 @media(min-width:540px){
 
 .logoContainer img{
-
         width:30%;
         height:30%;
         margin-bottom: 50px;
-
     }
 
 }/*end of 540px mq*/
@@ -263,27 +246,20 @@ header{
 @media(min-width:830px){
     .logoContainer{
         width:40%;
-
     }
 
     .logoContainer img{
-
         width:60%;
         height:40%;
         margin-bottom: 50px;
-
     }
 }/*end of 840px mq*/
 
 @media (min-width:1120px){
-
     .logoContainer{
         width:30%;
-
     }
 }
-
-
 
 
 @media screen and (max-height: 450px) {

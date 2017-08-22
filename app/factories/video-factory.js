@@ -1,8 +1,8 @@
 'use strict';
 
 latinApp.factory("VideoFactory", function($q, $http, FirebaseUrl){
-let topicData ={};
-//actions needed
+    let topicData ={};
+    //actions needed
     let getOneTopic = (topicId) =>{
         return $q((resolve, reject)=>{
             $http.get(`${FirebaseUrl}topics.json?orderBy="topic_id"&equalTo="${topicId}"`)
@@ -16,8 +16,6 @@ let topicData ={};
             });
         });
     };
-
-
 
     let getTopicData =()=>{
         return topicData;

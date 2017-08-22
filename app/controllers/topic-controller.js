@@ -2,7 +2,7 @@
 
 latinApp.controller("TopicController",function($scope, $window,$routeParams, UserFactory, VideoFactory){
 
- $scope.isAuth =()=> new Promise((resolve, reject)=>{
+    $scope.isAuth =()=> new Promise((resolve, reject)=>{
          if(UserFactory.isAuthenticated()){
             resolve();
         } else {
@@ -24,5 +24,4 @@ latinApp.controller("TopicController",function($scope, $window,$routeParams, Use
             console.log ("sorry, no topic returned",err);
         });
     };
-
 });

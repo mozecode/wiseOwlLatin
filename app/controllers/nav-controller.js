@@ -33,6 +33,5 @@ latinApp.controller("NavController", function($scope, $window, FilterFactory, Us
         UserFactory.logoutUser();
         $scope.closeNav();
         $window.location.href ='#!/login';
-
     };
 });
